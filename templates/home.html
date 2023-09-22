@@ -1,0 +1,36 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Differentiated Case Flow Management</h1>
+
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>Priority Of a Case predictor</legend>
+        </h1>
+        <div class="mb-3">
+            <label class="form-label">Number of people affected</label>
+            <input class="form-control" type="number" name="People_affected"
+                placeholder="number of people"  />
+        </div><div class="mb-3">
+            <label class="form-label">Compensation involved</label>
+            <input class="form-control" type="number" name="Compensation"
+                placeholder="Compensation"  />
+        </div><div class="mb-3">
+            <label class="form-label">Days from when the case was filed</label>
+            <input class="form-control" type="number" name="Time_period"
+                placeholder="time in days"  />
+        </div><div class="mb-3">
+            <label class="form-label">Deaths involved</label>
+            <input class="form-control" type="number" name="Death"
+                placeholder="number of people"  />
+        </div>
+
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict the priority score" required />
+        </div>
+    </form>
+    <h2>
+       THE  prediction is {{results}}
+    </h2>
+   <body>
+</html>
