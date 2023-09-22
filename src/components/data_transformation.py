@@ -25,7 +25,7 @@ class DataTransformation:
         this function is responsible for data transformation
         '''
         try:
-            numerical_columns = ['People affected', 'Compensation', 'Time period', 'Death']
+            numerical_columns = ['People affected', 'Compensation', 'Time period', 'Death','Days left']
 
             categorical_columns = []
             num_pipeline = Pipeline(
@@ -65,7 +65,7 @@ class DataTransformation:
             logging.info("Obtaining preprocessing object")
             preprocessing_obj = self.get_data_transformer_object()
             target_column_name = "Priority Score"
-            numerical_columns = ['People affected', 'Compensation', 'Time period', 'Death']
+            numerical_columns = ['People affected', 'Compensation', 'Time period', 'Death','Days left']
             input_feature_train_df = train_df.drop(columns=[target_column_name],axis=1)
             target_feature_train_df = train_df[target_column_name]
 

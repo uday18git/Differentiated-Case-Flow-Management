@@ -24,11 +24,13 @@ class CustomData:
                  People_affected: int,
                  Compensation: int,
                  Time_period: int,
-                 Death: int):
+                 Death: int,
+                 Days_left:int):
         self.People_affected = People_affected
         self.Compensation = Compensation
         self.Time_period = Time_period
         self.Death = Death
+        self.Days_left = Days_left
 
     def get_data_as_data_frame(self):
         try:
@@ -36,7 +38,8 @@ class CustomData:
                 "People affected": [self.People_affected/450000000],
                 "Compensation": [self.Compensation/120000000],
                 "Time period": [self.Time_period/29],
-                "Death": [self.Death/52]
+                "Death": [self.Death/52],
+                "Days left": [self.Days_left/1000]
             }
             return pd.DataFrame(custom_data_input_dict)
         except Exception as e:

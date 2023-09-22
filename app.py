@@ -21,7 +21,8 @@ def predict_datapoint():
             People_affected=float(request.form.get('People_affected')),
             Compensation=float(request.form.get('Compensation')),
             Time_period = float(request.form.get('Time_period')),
-            Death = float(request.form.get('Death'))
+            Death = float(request.form.get('Death')),
+            Days_left=float(request.form.get('Days_left'))
         )
         pred_df = data.get_data_as_data_frame()
         print(pred_df)
@@ -30,6 +31,7 @@ def predict_datapoint():
         predict_pipeline = PredictPipeline()
         print("Mid Prediction")
         results = predict_pipeline.predict(pred_df)
+        print(results[0])
         print("after Prediction")
         return render_template('home.html', results=results[0])
 

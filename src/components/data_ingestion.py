@@ -25,12 +25,13 @@ class DataIngestion:
             df = pd.read_excel('notebook\data\crime.xlsx')
             df = df.dropna()
             weights = {
-                'People affected': 0.25,
-                'Compensation': 0.25,
-                'Time period': 0.25,
-                'Death': 0.25
+                'People affected': 0.2,
+                'Compensation': 0.2,
+                'Time period': 0.2,
+                'Death': 0.2,
+                'Days left':-0.2
             }
-            numeric_columns = ['People affected', 'Compensation', 'Time period', 'Death']
+            numeric_columns = ['People affected', 'Compensation', 'Time period', 'Death','Days left']
             df[numeric_columns] = df[numeric_columns].apply(pd.to_numeric, errors='coerce')
             df[numeric_columns] = df[numeric_columns].apply(lambda x: pd.to_numeric(x, errors='coerce'))
             for column in numeric_columns:
