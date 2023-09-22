@@ -15,5 +15,12 @@
 ### home.html 
 ### index.html
 
-![demo](https://github.com/uday18git/Differentiated-Case-Flow-Management/assets/102567732/5cc7cec2-9d92-4391-89f2-fe6dbc7c3565)
+### home page
+
+![image](https://github.com/uday18git/Differentiated-Case-Flow-Management/assets/102567732/6d3a9a08-f148-4101-bd62-2eee312fac2a)
+
+
+### predict data page
+![image](https://github.com/uday18git/Differentiated-Case-Flow-Management/assets/102567732/ecfb2e9b-31a0-48e0-82a0-40beea311e8d)
+
 
